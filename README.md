@@ -9,6 +9,7 @@ Visual Studio Code 個人設定與 Profile 設定範本。
 | Profile | 設定檔 | 說明 |
 | --- | --- | --- |
 | Default | [`profile.default.settings.jsonc`](./profile.default.settings.jsonc) | 通用編輯器、終端機、Git、GitHub Copilot 與擴充功能設定 |
+| React | [`profile.react.settings.jsonc`](./profile.react.settings.jsonc) | React／前端開發設定，包含 Prettier 格式風格、語言格式化工具與 Copilot Chat 網站核准規則 |
 | .NET Core | [`profile.netcore.settings.jsonc`](./profile.netcore.settings.jsonc) | .NET/C# 開發設定，包含程式碼分析、Inlay Hints 與 PostgreSQL 連線範本 |
 
 設定檔採用 JSONC 格式，包含註解，便於了解各項設定用途。檔案中的大部分設定可套用於 User Settings；部分擴充功能設定則需要安裝相應擴充功能才能生效。
@@ -56,6 +57,14 @@ Visual Studio Code 個人設定與 Profile 設定範本。
 - 提供 OpenAPI 及 markdownlint 設定檔的 JSON Schema 對應。
 
 > 字型、色彩主題、格式化工具與擴充功能 ID 需依本機安裝項目調整。終端機預設 Profile 僅指定 Windows；其他平台可在各自的 VS Code 設定中選擇終端機。
+
+## React Profile 設定內容
+
+- 包含通用編輯器、Git 與 GitHub Copilot 設定，並啟用 Chat 待辦清單工具。
+- 設定 Prettier 使用 Tab 縮排、單引號、單一參數箭頭函式省略括號，以及每行一個 JSX 屬性等格式風格。
+- 為 JSON／JSONC、YAML 與 Markdown 指定格式化工具，並調整 Markdown 編輯與預覽行為。
+- 設定 Copilot Chat 對 GitHub、React、Vite、React Router、npm 等網站的請求或回應核准規則；核准方式依網站而異，使用前請確認信任來源。
+- 包含 Docker、YAML、Live Server、Better Comments、Power Mode 與 Console Ninja 等擴充功能設定；部分設定需安裝相應擴充功能才能生效。
 
 ## .NET Core Profile 設定內容
 
