@@ -9,6 +9,7 @@ Visual Studio Code 個人設定與 Profile 設定範本。
 | Profile | 設定檔 | 說明 |
 | --- | --- | --- |
 | Default | [`profile.default.settings.jsonc`](./profile.default.settings.jsonc) | 通用編輯器、終端機、Git、GitHub Copilot 與擴充功能設定 |
+| .NET Core | [`profile.netcore.settings.jsonc`](./profile.netcore.settings.jsonc) | .NET/C# 開發設定，包含程式碼分析、Inlay Hints 與 PostgreSQL 連線範本 |
 
 設定檔採用 JSONC 格式，包含註解，便於了解各項設定用途。檔案中的大部分設定可套用於 User Settings；部分擴充功能設定則需要安裝相應擴充功能才能生效。
 
@@ -55,6 +56,13 @@ Visual Studio Code 個人設定與 Profile 設定範本。
 - 提供 OpenAPI 及 markdownlint 設定檔的 JSON Schema 對應。
 
 > 字型、色彩主題、格式化工具與擴充功能 ID 需依本機安裝項目調整。終端機預設 Profile 僅指定 Windows；其他平台可在各自的 VS Code 設定中選擇終端機。
+
+## .NET Core Profile 設定內容
+
+- 延用一般編輯器、Git、GitHub Copilot 與擴充功能設定，並使用 14 號編輯器字體。
+- 為 C# 啟用 Inlay Hints、Roslyn 分析器及 `.editorconfig` 支援；格式化時整理 `using` 匯入。
+- 設定 PostgreSQL 的本機連線範本。套用前請確認伺服器、資料庫及登入資訊，並勿將密碼或其他機敏資料提交至版本控制。
+- 包含 Docker Compose 與 GitHub Actions YAML 的編輯器格式化設定。
 
 ## 套用設定
 

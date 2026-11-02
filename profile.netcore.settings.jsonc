@@ -1,0 +1,335 @@
+{
+  // *******************************
+  // GitHub Copilot 相關設定
+  // 以下設定僅適用於 User Settings
+  // *******************************
+  // 設定在所有檔案啟用 GitHub Copilot 功能，但停用「純文字」檔案類型。
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": true,
+    "yaml": true,
+    "html": true,
+    "powershell": true,
+    "javascript": true,
+    "aspnetcorerazor": true
+  },
+  "chat.editor.fontSize": 16,
+  // GitHub Copilot Chat Edit
+  // 該功能會在你嘗試刪除由 GitHub Copilot Chat 生成的程式碼變更時，提示你確認是否要刪除。這樣可以避免意外刪除程式碼變更，並確保你的程式碼變更是正確的。
+  "chat.editing.confirmEditRequestRemoval": true,
+  // 該功能會在你嘗試重新生成由 GitHub Copilot Chat 生成的程式碼變更時，提示你確認是否要重新生成。
+  "chat.editing.confirmEditRequestRetry": true,
+  // 設定此選項可以避免 Agent Mode 無法啟用的問題。請注意，在更改此設定後，您需要重新啟動 Visual Studio Code 以使更改生效。
+  "telemetry.telemetryLevel": "off",
+  // Github Copilot 設定結束
+  // *******************************
+  "editor.fontSize": 14,
+  // line height 設定為 22 px
+  "editor.lineHeight": 22,
+  "editor.rulers": [
+    120
+  ],
+  // 設定 tab 為 2 個空格
+  "editor.tabSize": 2,
+  "[csharp]": {
+    "editor.tabSize": 4
+  },
+  "[java]": {
+    "editor.tabSize": 4
+  },
+  // 可透過 Ctrl + 滾輪調整字體大小
+  "editor.mouseWheelZoom": true,
+  // 左側 Open Editors 顯示上限為 1 筆 default 9
+  "explorer.openEditors.visible": 1,
+  // 貼上程式碼時自動格式化
+  "editor.formatOnPaste": true,
+  // 啟用括號配對上色
+  "editor.bracketPairColorization.enabled": true,
+  // 只在選取區塊時顯示括號配對線條
+  "editor.guides.bracketPairs": "active",
+  // 關閉右側縮圖導航列（Minimap）
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  // 啟用游標平滑動畫
+  "editor.cursorSmoothCaretAnimation": "on",
+  // 使用 Tab 補全建議
+  "editor.tabCompletion": "on",
+  // 不自動移除行尾空白
+  "editor.trimAutoWhitespace": false,
+  // 建議優先顯示與目前檔案相關的符號
+  "editor.suggest.localityBonus": true,
+  // 自動選取建議清單中的第一個項目
+  "editor.suggestSelection": "first",
+  // 儲存時自動格式化程式碼
+  "editor.formatOnSave": true, // Prettier 存檔時自動調整code排版，手動調整要用alt + shift + f
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit" // 儲存時修復所有錯誤（需要明確觸發）
+  },
+  // 設定字體優先順序
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'JetBrains Mono', Consolas, 'Courier New', monospace, 'CaskaydiaCove Nerd Font'",
+  // 啟用字體連字
+  "editor.fontLigatures": true,
+  // 多游標切換使用 Ctrl（Windows）或 Cmd（Mac）
+  "editor.multiCursorModifier": "ctrlCmd",
+  // 游標閃爍效果為展開動畫
+  "editor.cursorBlinking": "expand",
+  // 啟用自動換行
+  "editor.wordWrap": "on",
+  // 啟用同步編輯 (Auto rename tag)
+  "editor.linkedEditing": true,
+  // 不高亮非基本 ASCII 字元
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  // Inlay Hints 加上 padding 以美化對齊
+  "editor.inlayHints.padding": true,
+  "editor.quickSuggestions": {
+    // 對其他內容啟用即時建議
+    "other": true,
+    // 不在註解中顯示建議
+    "comments": false,
+    // 在字串中啟用建議
+    "strings": true
+  },
+  // Windows 預設終端機使用 PowerShell
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  // 終端機使用指定字型
+  "terminal.integrated.fontFamily": "'MesloLFS NF', 'JetBrainsMonoNL Nerd Font Mono', 'JetBrainsMono Nerd Font Mono', Consolas, 'Courier New', monospace, 'CaskaydiaCove Nerd Font'",
+  "terminal.integrated.fontSize": 14, // 終端機字體大小為 14px
+  // Windows 終端機的環境變數設定
+  "terminal.integrated.env.windows": {},
+  // macOS 終端機環境變數
+  "terminal.integrated.env.osx": {},
+  // 終端機關閉時不顯示提示
+  "terminal.integrated.showExitAlert": false,
+  // 比較檔案時不忽略行尾空白
+  "diffEditor.ignoreTrimWhitespace": false,
+  // 自動儲存檔案
+  "files.autoSave": "onWindowChange",
+  // 移除檔案結尾多餘的空行
+  "files.trimFinalNewlines": true,
+  // 移除每行尾端多餘空白
+  "files.trimTrailingWhitespace": true,
+  // 新增一行作為檔案結束
+  "files.insertFinalNewline": true,
+  // 自動偵測編碼
+  "files.autoGuessEncoding": true,
+  "files.associations": {
+    // dockerfile 開頭的檔案自動套用 dockerfile 語法
+    "dockerfile.*": "dockerfile",
+    "dockerfile_*": "dockerfile",
+    "dockerfile-*": "dockerfile",
+    // C# 專案檔指定為 msbuild 語法
+    "*.csproj": "msbuild",
+    // Bazel 設定檔套用 Shell 語法
+    "*.bazelrc": "shellscript"
+  },
+  // 搜尋結果顯示行號
+  "search.showLineNumbers": true,
+  // 啟用麵包屑導航
+  "breadcrumbs.enabled": true,
+  // 使用 Visual Studio Dark 顏色主題
+  "workbench.colorTheme": "Atom One Dark",
+  // 使用 vscode-icons 檔案圖示主題
+  "workbench.iconTheme": "vscode-icons",
+  // 未命名檔案只顯示檔名
+  "workbench.editor.untitled.labelFormat": "name",
+  // 開新視窗使用預設設定
+  "window.newWindowProfile": null,
+  // 修改過的檔案標籤會有高亮提示
+  "workbench.editor.highlightModifiedTabs": true,
+  // 側邊欄列表可水平滾動
+  "workbench.list.horizontalScrolling": true,
+  // 清單搜尋模式為過濾
+  "workbench.list.defaultFindMode": "filter",
+  // 自動導引列表項目
+  "workbench.list.typeNavigationMode": "automatic",
+  // 開啟不受信任的檔案時直接開啟而非提示
+  "security.workspace.trust.untrustedFiles": "open",
+  // IntelliCode 自動覆寫建議選擇的預設值
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // 停用 VS Code 自動推薦擴充功能
+  "extensions.ignoreRecommendations": true,
+  // 將 Emmet 建議顯示為 Snippets
+  "emmet.showSuggestionsAsSnippets": true,
+  // 按下 Tab 鍵可展開 Emmet 縮寫
+  "emmet.triggerExpansionOnTab": true,
+  // Git 自動取得遠端變更
+  "git.autofetch": true,
+  // 同步時不跳出確認提示
+  "git.confirmSync": false,
+  // 不啟用 Git 提交簽章
+  "git.enableCommitSigning": false,
+  // 啟用智慧提交（可直接 Ctrl + Enter 提交）如果所有變更都還沒有 git add ( Stage ) 的話，預設會自動全部 Commit，不會再先問過。
+  "git.enableSmartCommit": true,
+  // 同步時使用 rebase 而不是 merge
+  "git.rebaseWhenSync": true,
+  // Git 區塊顯示 staged 區塊
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  // 對主題進行自定義
+  "editor.tokenColorCustomizations": {
+    "[Atom One Dark]": {
+      // 自定義 comment 字型顏色
+      "comments": "#9298a0"
+    },
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    }
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "openapi.json"
+      ],
+      "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/refs/tags/3.1.0/schemas/v3.0/schema.json"
+    }
+  ],
+  // depend on each profile
+  // 不顯示 Live Server 的資訊提示訊息
+  "liveServer.settings.donotShowInfoMsg": true,
+  // Docker 指令中的 JSON 若使用單引號會警告
+  "docker.languageserver.diagnostics.instructionJSONInSingleQuotes": "warning",
+  // 停用 Red Hat 插件的匿名使用統計 (YAML 套件)
+  "redhat.telemetry.enabled": false,
+  // highlightLine extension 設定高亮行的邊框寬度設定為 2px
+  "highlightLine.borderWidth": "2px",
+  // Better Comments 插件支援多行註解上色
+  "better-comments.multilineComments": true,
+  // 啟用 Power Mode
+  "powermode.enabled": true,
+  // 關閉 Power Mode 的螢幕震動效果
+  "powermode.shake.enabled": false,
+  // Power Mode combo 計數器不顯示位置
+  "powermode.combo.location": "off",
+  // 隱藏 Power Mode combo 計數器
+  "powermode.combo.counterEnabled": "hide",
+  // 啟用 YAML 格式化
+  "yaml.format.enable": true,
+  // YAML 使用單引號
+  "yaml.format.singleQuote": true,
+  // 停用 YAML 驗證（false: 可避免干擾）
+  "yaml.validate": true,
+  // Markdown 專屬設定
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    }
+  },
+  // Markdown 預覽中的連結在編輯器中開啟
+  "markdown.preview.openMarkdownLinks": "inEditor",
+  // programming language 設定
+  // C# 語法 hints 設定
+  "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
+  "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
+  "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
+  "csharp.inlayHints.enableInlayHintsForTypes": true,
+  "dotnet.inlayHints.enableInlayHintsForIndexerParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForLiteralParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForObjectCreationParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForOtherParameters": true,
+  "dotnet.inlayHints.enableInlayHintsForParameters": true,
+  "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+  "dotnet.formatting.organizeImportsOnFormat": true,
+  // 支援 .editorconfig 設定（C#）
+  "omnisharp.enableEditorConfigSupport": true,
+  // 啟用 Roslyn 分析器（C# 開發用）
+  "omnisharp.enableRoslynAnalyzers": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "docker.extension.enableComposeLanguageServer": false,
+  "pgsql.serverGroups": [
+    {
+      "name": "Servers",
+      "id": "1B1626FD-CE7D-4985-A520-F2759665C1FE",
+      "isDefault": true
+    }
+  ],
+  "pgsql.connections": [
+    {
+      "id": "74BDD0F7-8C31-4C89-AFB9-C2083CE0ABD6",
+      "groupId": "1B1626FD-CE7D-4985-A520-F2759665C1FE",
+      "authenticationType": "SqlLogin",
+      "connectTimeout": 15,
+      "applicationName": "vscode-pgsql",
+      "clientEncoding": "utf8",
+      "sslmode": "prefer",
+      "savePassword": true,
+      "server": "localhost",
+      "user": "postgres",
+      "password": "",
+      "sshPassword": "",
+      "profileName": "localdb, <default> (postgres)",
+      "database": "appdb",
+      "expiresOn": 0
+    }
+  ],
+  "chat.todoListTool.writeOnly": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "chat.viewSessions.orientation": "stacked",
+  "chat.tools.urls.autoApprove": {
+    "https://ant.design": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://www.google.com": true
+  },
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://raw.githubusercontent.com": true
+  },
+  "claudeCode.preferredLocation": "panel",
+  "remote.autoForwardPortsSource": "hybrid",
+  "git.openRepositoryInParentFolders": "never",
+  "chat.disableAIFeatures": true
+}
